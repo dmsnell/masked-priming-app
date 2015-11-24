@@ -1,6 +1,6 @@
 # Masked Priming Suite
 
-This app is being designed as a successor to the DMDX app for lexical testing. DMDX was built during a time when the physical hardware was a significant limiting factor in the design. Today, however, the ubiquity of fast computing has made it possible to reproduce the quality and accuracy of the testing suite while using modern higher-level software techniques. This app is designed to maximize two goals:
+This app is being designed as a successor to the [DMDX app for measuring reaction times to visual and auditory stimuli](http://www.u.arizona.edu/~kforster/dmdx/dmdx.htm). DMDX was built during a time when the physical hardware was a significant limiting factor in the design. Today, however, the ubiquity of fast computing has made it possible to reproduce the quality and accuracy of the testing suite while using modern higher-level software techniques. This app is designed to maximize two goals:
 
  - Make it easy for researchers to build experiments
  - Operate universally on multiple platforms
