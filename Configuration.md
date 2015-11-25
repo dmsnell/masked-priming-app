@@ -83,6 +83,55 @@ cardLibrary:
 
 Haha, just kidding! 😉
 
+### As actual language code
+
+The cards could be built programmatically too. This method really opens up the possibilities for an ambitious researcher who could pass around things like callbacks to modify behavior at runtime, though this would break the separation between the static and runtime components.
+
+#### In JavaScript
+```js
+makeSequence()
+  .addStack()
+    .addCard().fromLibrary( "focalPoint" )
+    .addCard().showing( "horse" ).lasting( 200 )
+    .addCard().showing( "house" )
+  .addStack()
+    .addCard().fromLibrary( "focalPoint" )
+    .addCard().showing( "cello" ).lasting( 100 )
+    .addCard().showing( "viola" ).lasting( 100 )
+    .addCard().showing( "violin" );
+
+makeLibrary()
+  .addCard().named( "focalPoint" ).showing( "*" ).lasting( 500 );
+```
+
+#### In Clojure
+```clojure
+(makeSequence
+  (addStack
+    (addCard fromLibrary "focalPoint")
+    (addCard showing "horse" for 500)
+    (addCard showing "house"))
+  (addStack
+    (addCard fromLibrary "focalPoint")
+    (addCard showing "cello" for 100)
+    (addCard showing "viola" for 100)
+    (addCard showing "violin")))
+
+(makeLibrary
+  (addCard named "focalPoint" showing "*" for 500))
+```
+
+#### Pros
+
+ - Maybe easier to extend and organically grow without breaking compatability
+ - Simply runs in the language - linters and parsers already exist
+ - Trivial to script by adding language code, _i.e._ looping, conditionals, etc...
+
+#### Cons
+
+ - Pretty verbose
+ - Basically required programming knowledge to harness
+
 ## Operational Properties
 
 The flow of the cards can be programmatically controlled, such as only displaying a certain card stack if another particular card stack had an inaccurate response.
