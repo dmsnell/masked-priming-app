@@ -135,6 +135,35 @@ makeLibrary()
  - Pretty verbose
  - Basically required programming knowledge to harness
 
+### As a domain-specific language
+
+Creating a small and special-purpose language might allow a much simpler syntax that would better suit the configuration for this app.
+
+```
+Card -> show "⛩" for 500ms
+Card -> show "Horse" for 1ms
+Card -> show "House"
+
+Card -> show "⛩" for 500ms
+Card -> show "cello" for 200ms
+Card -> show "violin"
+
+Card -> show "⛩" for 500ms
+Card -> show picture "./poodle.png" for 200ms
+Card -> show picture "./airedale.png"
+
+
+```
+
+#### Pros
+
+ - Purpose-built syntax
+ - Control over changes/additions to the syntax
+
+#### Cons
+
+ - Additional complexity in app to define language and parse it
+
 ## Operational Properties
 
 The flow of the cards can be programmatically controlled, such as only displaying a certain card stack if another particular card stack had an inaccurate response.
